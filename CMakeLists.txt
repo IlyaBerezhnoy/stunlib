@@ -50,7 +50,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 set ( CMAKE_BUILD_TYPE Debug )
 
-#set ( dist_dir    ${CMAKE_BINARY_DIR}/dist )
+#set ( dist_dir    ${OUTPUT_DIR}/dist )
 set ( prefix      ${CMAKE_INSTALL_PREFIX} )
 set ( exec_prefix ${CMAKE_INSTALL_PREFIX}/bin )
 set ( libdir      ${CMAKE_INSTALL_PREFIX}/lib )
