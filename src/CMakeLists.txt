@@ -16,6 +16,10 @@ set ( stunlib_srcs
 
 set (ADDITIONAL_LIBS "")
 
+include_directories ( 
+  "./../sockaddrutil/include"
+)
+
 add_library ( stunlib SHARED ${stunlib_srcs} )
 target_include_directories ( stunlib PUBLIC ../include )
 target_include_directories ( stunlib PRIVATE ../src )
@@ -27,7 +31,7 @@ install ( TARGETS stunlib
           RUNTIME DESTINATION bin)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
-
+add_dependencies(stunlib sockaddrutil)
 target_link_libraries ( stunlib PRIVATE sockaddrutil
                         ${ADDITIONAL_LIBS})
 

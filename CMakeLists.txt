@@ -179,7 +179,6 @@ endif()
 #set_property(TARGET sockaddrutil PROPERTY IMPORTED_LOCATION "${install_dir}/lib/${CMAKE_SHARED_MODULE_PREFIX}sockaddrutil${CMAKE_SHARED_LIBRARY_SUFFIX}")
 #add_dependencies(sockaddrutil project_sockaddrutil)
 
-
 ## include the parts
 add_subdirectory ( include )
 add_subdirectory ( src )
